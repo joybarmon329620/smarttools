@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartTools | Converter</title>
+  <link rel="stylesheet" href="css/converter.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>🔄 Smart Converter</h1>
+    <p>Convert units and currencies instantly — even offline</p>
+  </header>
+
+  <main class="converter-wrapper">
+    <section class="tabs">
+      <button class="tab active" data-tab="unit">Unit Converter</button>
+      <button class="tab" data-tab="currency">Currency Converter</button>
+    </section>
+
+    <!-- UNIT CONVERTER -->
+    <section id="unit" class="converter-box active">
+      <div class="form-group">
+        <label>Conversion Type</label>
+        <select id="unit-type">
+          <option value="length">Length</option>
+          <option value="weight">Weight</option>
+          <option value="temperature">Temperature</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>From</label>
+        <select id="from-unit"></select>
+      </div>
+
+      <div class="form-group">
+        <label>To</label>
+        <select id="to-unit"></select>
+      </div>
+
+      <div class="form-group">
+        <label>Amount</label>
+        <input type="number" id="unit-amount" placeholder="Enter value" value="1" />
+      </div>
+
+      <button id="convert-unit">Convert</button>
+      <div class="result" id="unit-result">Enter value to convert.</div>
+    </section>
+
+    <!-- CURRENCY CONVERTER -->
+    <section id="currency" class="converter-box">
+      <div class="form-group">
+        <label>Amount</label>
+        <input type="number" id="currency-amount" placeholder="e.g. 100" value="1" />
+      </div>
+
+      <div class="currency-pair">
+        <div>
+          <label>From</label>
+          <select id="from-currency"></select>
+        </div>
+
+        <button id="swap-btn" title="Swap currencies">⇅</button>
+
+        <div>
+          <label>To</label>
+          <select id="to-currency"></select>
+        </div>
+      </div>
+
+      <button id="convert-currency">Convert</button>
+      <div class="result" id="currency-result">Enter amount and select currencies.</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SmartTools | Designed by <span>Joy</span></p>
+  </footer>
+
+  <script src="js/converter.js"></script>
+</body>
+</html>

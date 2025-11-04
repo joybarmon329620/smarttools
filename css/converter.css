@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0d1117;
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #1e232a;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #00aaff;
+}
+
+header p {
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #1e232a;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* MAIN CONVERTER */
+.converter-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.tab {
+  background: #161b22;
+  border: 1px solid #2c3038;
+  color: #aaa;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  background: #0072ff;
+  color: #fff;
+  border-color: #0072ff;
+}
+
+/* Boxes */
+.converter-box {
+  background: #161b22;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 420px;
+  display: none;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.converter-box.active {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  color: #bbb;
+  margin-bottom: 0.4rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #2c3038;
+  border-radius: 8px;
+  background: #0d1117;
+  color: #fff;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  border-color: #0072ff;
+  outline: none;
+}
+
+/* Currency Pair */
+.currency-pair {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#swap-btn {
+  background: #0072ff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#swap-btn:hover {
+  transform: rotate(180deg);
+}
+
+/* Buttons */
+button#convert-unit,
+button#convert-currency {
+  width: 100%;
+  padding: 0.8rem;
+  background: #00aaff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button#convert-unit:hover,
+button#convert-currency:hover {
+  background: #0072ff;
+}
+
+/* Results */
+.result {
+  text-align: center;
+  margin-top: 1.2rem;
+  background: #0d1117;
+  padding: 0.8rem;
+  border-radius: 8px;
+  color: #00ffb3;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
